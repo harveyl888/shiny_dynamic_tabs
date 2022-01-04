@@ -78,7 +78,6 @@ server <- function(input, output, session) {
 
   ## tabs
   output$ui_tabs <- renderUI({
-
     isolate({
       rv$dataset_count <- rv$dataset_count + 1
       dataset_name <- paste0("dataset_", rv$dataset_count)
