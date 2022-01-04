@@ -138,7 +138,10 @@ server <- function(input, output, session) {
 
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  tags$head(tags$script(src = "script.js", type="text/javascript")),
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
+    tags$script(src = "script.js", type="text/javascript")
+  ),
   br(),
   fluidRow(
     column(8, uiOutput("ui_tabs")),
